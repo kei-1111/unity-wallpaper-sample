@@ -19,16 +19,31 @@ import unity.wallpaper.sample.theme.UnityWallpaperSampleTheme
 import unity.wallpaper.sample.unity.UnityWallpaperService
 
 @Composable
-fun MainScreen(modifier: Modifier = Modifier) {
+fun MainScreen(
+  modifier: Modifier = Modifier
+) {
   val context = LocalContext.current
-  MainScreen(onSetWallpaper = { openLiveWallpaperPreview(context) }, modifier = modifier)
+  MainScreen(
+    onSetWallpaper = { openLiveWallpaperPreview(context) },
+    modifier = modifier
+  )
 }
 
 @Composable
-internal fun MainScreen(onSetWallpaper: () -> Unit, modifier: Modifier = Modifier) {
-  Box(modifier = modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-    Button(onClick = onSetWallpaper) {
-      Text(text = stringResource(R.string.button_set_wallpaper))
+internal fun MainScreen(
+  onSetWallpaper: () -> Unit,
+  modifier: Modifier = Modifier
+) {
+  Box(
+    modifier = modifier.fillMaxSize(),
+    contentAlignment = Alignment.Center
+  ) {
+    Button(
+      onClick = onSetWallpaper
+    ) {
+      Text(
+        text = stringResource(R.string.button_set_wallpaper)
+      )
     }
   }
 }
@@ -53,5 +68,9 @@ private fun openLiveWallpaperPreview(context: Context) {
 @Preview(showBackground = true)
 @Composable
 fun MainScreenPreview() {
-  UnityWallpaperSampleTheme { MainScreen(onSetWallpaper = {}) }
+  UnityWallpaperSampleTheme {
+    MainScreen(
+      onSetWallpaper = {}
+    )
+  }
 }

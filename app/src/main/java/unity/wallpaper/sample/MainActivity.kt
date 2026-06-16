@@ -21,8 +21,15 @@ class MainActivity : ComponentActivity() {
     enableEdgeToEdge()
     setContent {
       UnityWallpaperSampleTheme {
-        Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-          MainScreen(modifier = Modifier.safeDrawingPadding().padding(16.dp))
+        Surface(
+          modifier = Modifier.fillMaxSize(),
+          color = MaterialTheme.colorScheme.background
+        ) {
+          MainScreen(
+            modifier = Modifier
+              .safeDrawingPadding()
+              .padding(16.dp)
+          )
         }
       }
     }
