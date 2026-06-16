@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">UnityWallpaperSample</string>
+    <string name="button_set_wallpaper">Unityを壁紙に設定</string>
+    <string name="content_description_wallpaper">Unity Live Wallpaper</string>
+</resources>
